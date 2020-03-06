@@ -596,7 +596,7 @@ class Builder(object):
 			raise DockerfileFormatError("WORKDIR doesn't support JSON arguments.")
 
 		# Generate args.
-		workdir_args = ["--config.workdir="+args[0]]
+		workdir_args = ["--config.workingdir="+args[0]]
 		self.umoci_config(*workdir_args)
 
 	def _dispatch_env(self, *args, isjson=False):
